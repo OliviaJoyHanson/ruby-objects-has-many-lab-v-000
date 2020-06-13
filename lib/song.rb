@@ -10,7 +10,7 @@ class Song
   end
 
   def artist_name
-    self.artist.name if @artist.songs.include?(self)
+    self.artist.name if @artist.songs.nil?
 
   end
 
