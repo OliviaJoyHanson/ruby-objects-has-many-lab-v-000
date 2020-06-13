@@ -5,12 +5,13 @@ class Song
     @name = name
   end
 
+  def name
+    @name
+  end
+
   def artist_name
-    if self.artist.nil?
-      nil
-    else
-      self.artist.name
-    end
+    self.artist.name if @artist.songs.include?(self)
+
   end
 
 end
